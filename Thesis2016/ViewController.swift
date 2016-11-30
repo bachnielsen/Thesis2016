@@ -9,8 +9,28 @@
 import UIKit
 import ResearchKit
 
+
 class ViewController: UIViewController, ORKTaskViewControllerDelegate {
 
+    let healthManager:HealthManager = HealthManager()
+    
+    
+    func authorizeHealthKit()
+    {
+        healthManager.authorizeHealthKit { (authorized,  error) -> Void in
+            if authorized {
+                print("HealthKit authorization received.")
+            }
+            else
+            {
+                print("HealthKit authorization denied!")
+                if error != nil {
+                    print("\(error)")
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +58,10 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         taskViewController.dismiss(animated: true, completion: nil)
     }
     
+    // Healthkit Access Object
+//    let healthkitStore:HealthkitStore = HKHealthStore()
+
+
 
 }
 
