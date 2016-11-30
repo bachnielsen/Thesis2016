@@ -1,0 +1,12 @@
+PODS:
+  - ResearchKit (1.3.1)
+
+DEPENDENCIES:
+  - ResearchKit (~> 1.3)
+
+SPEC CHECKSUMS:
+  ResearchKit: badba0340dd71d1cbab4789a0bf01b26022b8f94
+
+PODFILE CHECKSUM: 93eab58f87705a95a3ae357093a361ae24898e06
+
+COCOAPODS: 1.1.1
