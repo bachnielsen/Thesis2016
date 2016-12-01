@@ -52,6 +52,11 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }
+    @IBAction func physActTapped(sender : AnyObject) {
+        let viewController = ORKTaskViewController(task: PhysTask, taskRun: nil)
+        viewController.delegate = self
+        present(viewController, animated: true, completion: nil)
+    }
     
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         //Handle results with taskViewController.result

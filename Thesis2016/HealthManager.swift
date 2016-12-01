@@ -14,8 +14,7 @@ class HealthManager{
     
     let healthKitStore:HKHealthStore = HKHealthStore()
     
-    func authorizeHealthKit(completion: ((_ success: Bool, _ error: NSError?) -> Void)!)
-    {
+    func authorizeHealthKit(completion: ((_ success: Bool, _ error: NSError?) -> Void)!){
         // 1. Set the types you want to read from HK Store
         
         let healthKitTypesToRead: Set<HKObjectType> = [
