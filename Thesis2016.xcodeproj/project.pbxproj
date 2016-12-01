@@ -18,6 +18,7 @@
 		A539BA301DC8B74000920711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A539BA2E1DC8B74000920711 /* LaunchScreen.storyboard */; };
 		A539BA3B1DC8B74000920711 /* Thesis2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA3A1DC8B74000920711 /* Thesis2016Tests.swift */; };
 		A539BA461DC8B74000920711 /* Thesis2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA451DC8B74000920711 /* Thesis2016UITests.swift */; };
+		A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */; };
 		A564A95B1DCA1156007F6B46 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A564A95A1DCA1156007F6B46 /* HealthKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */; };
 		A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */; };
@@ -62,6 +63,7 @@
 		A539BA451DC8B74000920711 /* Thesis2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thesis2016UITests.swift; sourceTree = "<group>"; };
 		A539BA471DC8B74000920711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A539BA531DC8BA9E00920711 /* Thesis2016.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thesis2016.entitlements; sourceTree = "<group>"; };
+		A55890BD1DF0372F00EA2A34 /* Thesis2016.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thesis2016.xcdatamodel; sourceTree = "<group>"; };
 		A564A95A1DCA1156007F6B46 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				A539BA531DC8BA9E00920711 /* Thesis2016.entitlements */,
 				A539BA251DC8B74000920711 /* AppDelegate.swift */,
+				A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */,
 				A539BA271DC8B74000920711 /* ViewController.swift */,
 				A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */,
 				A501DA8C1DCE135700E46853 /* SurveyTask.swift */,
@@ -475,6 +478,7 @@
 				A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */,
 				A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */,
 				A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */,
+				A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */,
 				A539BA261DC8B74000920711 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +757,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A55890BD1DF0372F00EA2A34 /* Thesis2016.xcdatamodel */,
+			);
+			currentVersion = A55890BD1DF0372F00EA2A34 /* Thesis2016.xcdatamodel */;
+			path = Thesis2016.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A539BA1A1DC8B74000920711 /* Project object */;
 }
