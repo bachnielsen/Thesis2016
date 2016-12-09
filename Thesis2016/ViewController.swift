@@ -22,19 +22,16 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var distanceTraveled = 0.0
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
-    func authorizeHealthKit()
-    {
-        healthManager.authorizeHealthKit { (authorized,  error) -> Void in
-            if authorized {
-                print("HealthKit authorization received.")
-            }
-            else
-            {
-                print("HealthKit authorization denied!")
-                if error != nil {
-                    print("\(error)")
-                }
+    //Start/stop button
+    var launchBool: Bool = false {
+        didSet {
+            if launchBool == true {
+                startButton.setTitle("Stop", for: .normal)
+            } else {
+                startButton.setTitle("Start", for: .normal)
             }
         }
     }
@@ -43,6 +40,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        startButton.setTitle("Start", for: .normal)
         
         //http://www.appcoda.com/healthkit-introduction/
         locationManager.requestWhenInUseAuthorization()
@@ -63,17 +62,43 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         // Dispose of any resources that can be recreated.
     }
     
+    func authorizeHealthKit()
+    {
+        healthManager.authorizeHealthKit { (authorized,  error) -> Void in
+            if authorized {
+                print("HealthKit authorization received.")
+            }
+            else
+            {
+                print("HealthKit authorization denied!")
+                if error != nil {
+                    print("\(error)")
+                }
+            }
+        }
+    }
+    
+    @IBAction func startDistance(sender : AnyObject!) {
+        launchBool = !launchBool
+        if launchBool == true {
+            distanceTraveled = 0.0
+            startLocation = nil
+            lastLocation = nil
+            
+            locationManager.startUpdatingLocation()
+        }else{
+            print("Stopped")
+            locationManager.stopUpdatingLocation()
+        }
+        
+    }
+    
     @IBAction func consentTapped(sender : AnyObject) {
         let taskViewController = ORKTaskViewController(task: ConsentTask, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }
-
-//    @IBAction func bodilyPainTapped2(sender : AnyObject) {
-//        let viewController = ORKTaskViewController(task: BodilyPainTask, taskRun: nil)
-//        viewController.delegate = self
-//        present(viewController, animated: true, completion: nil)
-//    }
+    
     @IBAction func surveyTapped(sender : AnyObject) {
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
         taskViewController.delegate = self
@@ -89,6 +114,21 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         let taskViewController = ORKTaskViewController(task: BodilyPainTask, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first as CLLocation!
+        } else {
+            let lastDistance = lastLocation.distance(from: locations.last as CLLocation!)
+            distanceTraveled += lastDistance
+            
+            let trimmedDistance = String(format: "%.2f", distanceTraveled)
+            
+            distanceLabel.text = "\(trimmedDistance) km"
+        }
+        
+        lastLocation = locations.last as CLLocation!
     }
     
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
