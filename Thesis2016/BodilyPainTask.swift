@@ -9,10 +9,6 @@
 import Foundation
 import ResearchKit
 
-//case scaleQuestionTask
-//case .scaleQuestion:
-//return scaleQuestionTask
-
 private var questionTextBP1: String {
     return NSLocalizedString("How much BODILY pain have you had during the PAST 4 WEEKS?", comment: "")
 }

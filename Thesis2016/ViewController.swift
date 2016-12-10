@@ -116,16 +116,22 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         present(taskViewController, animated: true, completion: nil)
     }
 
+    @IBAction func RFPhysTapped(sender : AnyObject) {
+        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+        taskViewController.delegate = self
+        present(taskViewController, animated: true, completion: nil)
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if startLocation == nil {
             startLocation = locations.first as CLLocation!
         } else {
             let lastDistance = lastLocation.distance(from: locations.last as CLLocation!)
-            distanceTraveled += lastDistance
+            distanceTraveled += lastDistance // * 0.001
             
             let trimmedDistance = String(format: "%.2f", distanceTraveled)
-            
-            distanceLabel.text = "\(trimmedDistance) km"
+            distanceLabel.text = "\(trimmedDistance) m"
+            //distanceLabel.text = "\(distanceTraveled) m"
         }
         
         lastLocation = locations.last as CLLocation!

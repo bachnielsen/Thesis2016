@@ -24,6 +24,7 @@
 		A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */; };
 		A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5979A5E1DF061D8005510B4 /* PhysTask.swift */; };
 		A5BFCEB51DF96E0300FA187D /* BodilyPainTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */; };
+		A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */; };
 		A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */; };
 		B34925FE14F52BF35FFCCCCD /* Pods_Thesis2016UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		A5979A5E1DF061D8005510B4 /* PhysTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysTask.swift; sourceTree = "<group>"; };
 		A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodilyPainTask.swift; sourceTree = "<group>"; };
+		A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalFunctioningTask.swift; sourceTree = "<group>"; };
 		A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				A501DA871DCDF84C00E46853 /* ConsentTask.swift */,
 				A5979A5E1DF061D8005510B4 /* PhysTask.swift */,
 				A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */,
+				A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */,
 				A539BA291DC8B74000920711 /* Main.storyboard */,
 				A539BA2C1DC8B74000920711 /* Assets.xcassets */,
 				A539BA2E1DC8B74000920711 /* LaunchScreen.storyboard */,
@@ -492,6 +495,7 @@
 				A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */,
 				A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */,
 				A55A39701DF052D9006A75E9 /* RunningViewController.swift in Sources */,
+				A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */,
 				A539BA261DC8B74000920711 /* AppDelegate.swift in Sources */,
 				A5BFCEB51DF96E0300FA187D /* BodilyPainTask.swift in Sources */,
 			);
