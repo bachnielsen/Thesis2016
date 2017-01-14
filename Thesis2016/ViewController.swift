@@ -127,7 +127,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
             startLocation = locations.first as CLLocation!
         } else {
             let lastDistance = lastLocation.distance(from: locations.last as CLLocation!)
-            distanceTraveled += lastDistance // * 0.001
+            distanceTraveled += lastDistance * 0.001
             
             let trimmedDistance = String(format: "%.2f", distanceTraveled)
             distanceLabel.text = "\(trimmedDistance) m"

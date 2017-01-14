@@ -13,7 +13,7 @@ private var mainQuestion: String {
     return NSLocalizedString("The following items are about activities you might do during a typical day. Does your health now limit you in these activities? If so, how much?", comment: "")
 }
 
-private var underQuestion1: String {
+public var underQuestion1: String {
     return NSLocalizedString("Vigorous activities, such as running, lifting heavy objects, participating in strenuous sports", comment: "")
 }
 private var underQuestion2: String {
@@ -47,7 +47,31 @@ private var underQuestion11 = UILabel()
 
 
 public var PhysicalFunctioningTask: ORKTask {
-
+    
+/*Trying to bold part of question text*/
+ 
+//    let targetString = "Updated 2012/10/14 21:59 PM"
+//    let range = NSMakeRange(7, 12)
+//    
+//    func attributedString(from string: String, nonBoldRange: NSRange?) -> NSAttributedString {
+//        let fontSize = UIFont.systemFontSize
+//        let attrs = [
+//            NSFontAttributeName: UIFont.boldSystemFont(ofSize: fontSize),
+//            NSForegroundColorAttributeName: UIColor.black
+//        ]
+//        let nonBoldAttribute = [
+//            NSFontAttributeName: UIFont.systemFont(ofSize: fontSize),
+//            ]
+//        let attrStr = NSMutableAttributedString(string: string, attributes: attrs)
+//        if let range = nonBoldRange {
+//            attrStr.setAttributes(nonBoldAttribute, range: range)
+//        }
+//        return attrStr
+//    }
+    
+//    underQuestion1 = attributedString(from: underQuestion1, nonBoldRange: range)
+    
+    
     var steps = [ORKStep]()
     
     //Instruction step
@@ -55,6 +79,7 @@ public var PhysicalFunctioningTask: ORKTask {
     instructionStep.title = "Physical Functioning"
     instructionStep.text = "The following items are about activities you might do during a typical day. Does your health now limit you in these activities? If so, how much?"
     steps += [instructionStep]
+    
     
     //Questionnaire answers
     let textChoiceOneText = NSLocalizedString("Yes, limited a lot", comment: "")
