@@ -12,7 +12,7 @@ import ResearchKit
 public var SurveyTask: ORKOrderedTask {
     
     var steps = [ORKStep]()
-    //test
+    
     //TODO: add instructions step
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "The Questions Three"

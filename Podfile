@@ -8,6 +8,7 @@ target 'Thesis2016' do
   # Pods for Thesis2016
   
   pod 'ResearchKit', '~> 1.3'
+  pod 'CareKit', '~> 1.0'
 
   target 'Thesis2016Tests' do
     inherit! :search_paths

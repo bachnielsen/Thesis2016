@@ -11,6 +11,9 @@
 		56C5E69B39549FE4C4A701F1 /* Pods_Thesis2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */; };
 		A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA871DCDF84C00E46853 /* ConsentTask.swift */; };
 		A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA8C1DCE135700E46853 /* SurveyTask.swift */; };
+		A52B91DE1E2A739B003251A6 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; };
+		A52B91DF1E2A739B003251A6 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */; };
 		A539BA261DC8B74000920711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA251DC8B74000920711 /* AppDelegate.swift */; };
 		A539BA281DC8B74000920711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA271DC8B74000920711 /* ViewController.swift */; };
 		A539BA2B1DC8B74000920711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A539BA291DC8B74000920711 /* Main.storyboard */; };
@@ -21,6 +24,7 @@
 		A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */; };
 		A55890C11DF0380100EA2A34 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A564A95A1DCA1156007F6B46 /* HealthKit.framework */; };
 		A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */; };
+		A59591831E2A6D18003CB7E9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */; };
 		A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5979A5E1DF061D8005510B4 /* PhysTask.swift */; };
 		A5BFCEB51DF96E0300FA187D /* BodilyPainTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */; };
 		A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */; };
@@ -29,6 +33,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A52B91DA1E2A7393003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		A52B91DC1E2A7393003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
+			remoteInfo = CareKitTests;
+		};
+		A52B91E01E2A739B003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8605A5B91C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		A52B91EA1E2A887A003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C1008D1CB12E0C00FAD7E8;
+			remoteInfo = OCKSample;
+		};
+		A52B91EC1E2A887A003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18214FC41D3D9C8000AE765B;
+			remoteInfo = OCKSampleWatch;
+		};
+		A52B91EE1E2A887A003251A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18214FD01D3D9C8000AE765B;
+			remoteInfo = "OCKSampleWatch Extension";
+		};
 		A539BA371DC8B74000920711 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A539BA1A1DC8B74000920711 /* Project object */;
@@ -45,6 +91,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A5AA3C2D1E2A6AA600DC7154 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A52B91DF1E2A739B003251A6 /* CareKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0456968C1F4C4145E485A1EF /* Pods-Thesis2016UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016UITests/Pods-Thesis2016UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C20754DE0DF132BEF7A1FBA /* Pods-Thesis2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016/Pods-Thesis2016.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +112,9 @@
 		88B31A01AA3FCC5A62C2018B /* Pods-Thesis2016UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016UITests/Pods-Thesis2016UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A501DA871DCDF84C00E46853 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		A501DA8C1DCE135700E46853 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCKSample.xcodeproj; path = ../../../../carekit/Sample/OCKSample.xcodeproj; sourceTree = "<group>"; };
+		A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
 		A539BA221DC8B74000920711 /* Thesis2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thesis2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A539BA251DC8B74000920711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A539BA271DC8B74000920711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +133,7 @@
 		A55890BF1DF037AA00EA2A34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A564A95A1DCA1156007F6B46 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A5979A5E1DF061D8005510B4 /* PhysTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysTask.swift; sourceTree = "<group>"; };
 		A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodilyPainTask.swift; sourceTree = "<group>"; };
 		A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalFunctioningTask.swift; sourceTree = "<group>"; };
@@ -86,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52B91DE1E2A739B003251A6 /* CareKit.framework in Frameworks */,
 				A55890C11DF0380100EA2A34 /* HealthKit.framework in Frameworks */,
 				56C5E69B39549FE4C4A701F1 /* Pods_Thesis2016.framework in Frameworks */,
 			);
@@ -110,6 +175,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A52B91D51E2A7392003251A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A52B91DB1E2A7393003251A6 /* CareKit.framework */,
+				A52B91DD1E2A7393003251A6 /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A52B91E31E2A887A003251A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A52B91EB1E2A887A003251A6 /* OCKSample.app */,
+				A52B91ED1E2A887A003251A6 /* OCKSampleWatch.app */,
+				A52B91EF1E2A887A003251A6 /* OCKSampleWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A539BA191DC8B74000920711 = {
 			isa = PBXGroup;
 			children = (
@@ -140,16 +224,19 @@
 				A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */,
 				A539BA271DC8B74000920711 /* ViewController.swift */,
 				A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */,
+				A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */,
 				A501DA8C1DCE135700E46853 /* SurveyTask.swift */,
 				A501DA871DCDF84C00E46853 /* ConsentTask.swift */,
 				A5979A5E1DF061D8005510B4 /* PhysTask.swift */,
 				A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */,
 				A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */,
 				A539BA291DC8B74000920711 /* Main.storyboard */,
+				A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */,
 				A539BA2C1DC8B74000920711 /* Assets.xcassets */,
 				A539BA2E1DC8B74000920711 /* LaunchScreen.storyboard */,
 				A539BA311DC8B74000920711 /* Info.plist */,
 				A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */,
+				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
 			);
 			path = Thesis2016;
 			sourceTree = "<group>";
@@ -175,6 +262,7 @@
 		A539BA541DC8BA9E00920711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */,
 				A55890BF1DF037AA00EA2A34 /* CoreData.framework */,
 				A564A95A1DCA1156007F6B46 /* HealthKit.framework */,
 				B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */,
@@ -210,10 +298,12 @@
 				A539BA201DC8B74000920711 /* Resources */,
 				507B3E497794A7BBE711A0C6 /* [CP] Embed Pods Frameworks */,
 				DF1757AF5C0BA19A3BC73F4D /* [CP] Copy Pods Resources */,
+				A5AA3C2D1E2A6AA600DC7154 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A52B91E11E2A739B003251A6 /* PBXTargetDependency */,
 			);
 			name = Thesis2016;
 			productName = Thesis2016;
@@ -305,6 +395,16 @@
 			mainGroup = A539BA191DC8B74000920711;
 			productRefGroup = A539BA231DC8B74000920711 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A52B91D51E2A7392003251A6 /* Products */;
+					ProjectRef = A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */;
+				},
+				{
+					ProductGroup = A52B91E31E2A887A003251A6 /* Products */;
+					ProjectRef = A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A539BA211DC8B74000920711 /* Thesis2016 */,
@@ -313,6 +413,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A52B91DB1E2A7393003251A6 /* CareKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKit.framework;
+			remoteRef = A52B91DA1E2A7393003251A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A52B91DD1E2A7393003251A6 /* CareKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitTests.xctest;
+			remoteRef = A52B91DC1E2A7393003251A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A52B91EB1E2A887A003251A6 /* OCKSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OCKSample.app;
+			remoteRef = A52B91EA1E2A887A003251A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A52B91ED1E2A887A003251A6 /* OCKSampleWatch.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OCKSampleWatch.app;
+			remoteRef = A52B91EC1E2A887A003251A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A52B91EF1E2A887A003251A6 /* OCKSampleWatch Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "OCKSampleWatch Extension.appex";
+			remoteRef = A52B91EE1E2A887A003251A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A539BA201DC8B74000920711 /* Resources */ = {
@@ -486,10 +624,12 @@
 			files = (
 				A539BA281DC8B74000920711 /* ViewController.swift in Sources */,
 				A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */,
+				A59591831E2A6D18003CB7E9 /* TabBarViewController.swift in Sources */,
 				A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */,
 				A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */,
 				A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */,
 				A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */,
+				A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */,
 				A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */,
 				A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */,
 				A539BA261DC8B74000920711 /* AppDelegate.swift in Sources */,
@@ -516,6 +656,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A52B91E11E2A739B003251A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CareKit;
+			targetProxy = A52B91E01E2A739B003251A6 /* PBXContainerItemProxy */;
+		};
 		A539BA381DC8B74000920711 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A539BA211DC8B74000920711 /* Thesis2016 */;
