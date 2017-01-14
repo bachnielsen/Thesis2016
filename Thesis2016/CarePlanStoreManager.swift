@@ -16,6 +16,12 @@ class CarePlanStoreManager: NSObject {
     static var sharedCarePlanStoreManager = CarePlanStoreManager()
     var store: OCKCarePlanStore
     
+//    var insights: [OCKInsightItem] {
+//        return insightsBuilder.insights
+//    }
+//    
+//    fileprivate let insightsBuilder: InsightsBuilder
+
     override init() {
         let fileManager = FileManager.default
         guard let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).last else {
@@ -30,9 +36,38 @@ class CarePlanStoreManager: NSObject {
         
         // Create the store (CarePlanStore)
         store = OCKCarePlanStore(persistenceDirectoryURL: storeURL)
+        
+//        insightsBuilder = InsightsBuilder(carePlanStore: store)
+        
         super.init()
+        
+//        // Start to build the initial array of insights.
+//        updateInsights()
     }
     
-    
-    
+//    func updateInsights() {
+//        insightsBuilder.updateInsights { [weak self] completed, newInsights in
+//            // If new insights have been created, notifiy the delegate.
+//            guard let storeManager = self, let newInsights = newInsights , completed else { return }
+//            storeManager.delegate?.carePlanStoreManager(storeManager, didUpdateInsights: newInsights)
+//        }
+//    }
 }
+
+//extension CarePlanStoreManager: OCKCarePlanStoreDelegate {
+//    func carePlanStoreActivityListDidChange(_ store: OCKCarePlanStore) {
+//        updateInsights()
+//    }
+//    
+//    func carePlanStore(_ store: OCKCarePlanStore, didReceiveUpdateOf event: OCKCarePlanEvent) {
+//        updateInsights()
+//    }
+//}
+//
+//
+//
+//protocol CarePlanStoreManagerDelegate: class {
+//    
+//    func carePlanStoreManager(_ manager: CarePlanStoreManager, didUpdateInsights insights: [OCKInsightItem])
+//    
+//}
