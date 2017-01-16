@@ -28,7 +28,10 @@
 		A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5979A5E1DF061D8005510B4 /* PhysTask.swift */; };
 		A5BFCEB51DF96E0300FA187D /* BodilyPainTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */; };
 		A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */; };
+		A5C0AEA31E2C2E8300E81CA8 /* NSDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0AEA21E2C2E8300E81CA8 /* NSDateComponents.swift */; };
 		A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */; };
+		A5D6F3531E2C218400A19AC8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F3521E2C218400A19AC8 /* Colors.swift */; };
+		A5DBFD9A1E2C107D0084BEB2 /* CarePlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBFD991E2C107D0084BEB2 /* CarePlanData.swift */; };
 		B34925FE14F52BF35FFCCCCD /* Pods_Thesis2016UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,7 +140,10 @@
 		A5979A5E1DF061D8005510B4 /* PhysTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysTask.swift; sourceTree = "<group>"; };
 		A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodilyPainTask.swift; sourceTree = "<group>"; };
 		A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalFunctioningTask.swift; sourceTree = "<group>"; };
+		A5C0AEA21E2C2E8300E81CA8 /* NSDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComponents.swift; sourceTree = "<group>"; };
 		A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		A5D6F3521E2C218400A19AC8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = ../../../../carekit/Sample/OCKSample/Colors.swift; sourceTree = "<group>"; };
+		A5DBFD991E2C107D0084BEB2 /* CarePlanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanData.swift; sourceTree = "<group>"; };
 		B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB00C4231640631996C09A4C /* Pods-Thesis2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016Tests/Pods-Thesis2016Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +207,6 @@
 				A539BA391DC8B74000920711 /* Thesis2016Tests */,
 				A539BA441DC8B74000920711 /* Thesis2016UITests */,
 				A539BA231DC8B74000920711 /* Products */,
-				A539BA541DC8BA9E00920711 /* Frameworks */,
 				F3B3CE57EC7FE2144AC379B9 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -221,6 +226,12 @@
 			children = (
 				A539BA531DC8BA9E00920711 /* Thesis2016.entitlements */,
 				A539BA251DC8B74000920711 /* AppDelegate.swift */,
+				A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */,
+				A539BA291DC8B74000920711 /* Main.storyboard */,
+				A5DBFD931E2C105B0084BEB2 /* Care Plan Store */,
+				A5C0AEA91E2C2EF800E81CA8 /* Utilities */,
+				A5C0AEAA1E2C2F6E00E81CA8 /* Support Files */,
+				A539BA541DC8BA9E00920711 /* Frameworks */,
 				A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */,
 				A539BA271DC8B74000920711 /* ViewController.swift */,
 				A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */,
@@ -229,12 +240,6 @@
 				A5979A5E1DF061D8005510B4 /* PhysTask.swift */,
 				A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */,
 				A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */,
-				A539BA291DC8B74000920711 /* Main.storyboard */,
-				A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */,
-				A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */,
-				A539BA2C1DC8B74000920711 /* Assets.xcassets */,
-				A539BA2E1DC8B74000920711 /* LaunchScreen.storyboard */,
-				A539BA311DC8B74000920711 /* Info.plist */,
 				A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */,
 				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
 			);
@@ -270,6 +275,35 @@
 				B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */,
 			);
 			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A5C0AEA91E2C2EF800E81CA8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A5D6F3521E2C218400A19AC8 /* Colors.swift */,
+				A5C0AEA21E2C2E8300E81CA8 /* NSDateComponents.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A5C0AEAA1E2C2F6E00E81CA8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A539BA2C1DC8B74000920711 /* Assets.xcassets */,
+				A539BA2E1DC8B74000920711 /* LaunchScreen.storyboard */,
+				A539BA311DC8B74000920711 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		A5DBFD931E2C105B0084BEB2 /* Care Plan Store */ = {
+			isa = PBXGroup;
+			children = (
+				A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */,
+				A5DBFD991E2C107D0084BEB2 /* CarePlanData.swift */,
+			);
+			name = "Care Plan Store";
 			sourceTree = "<group>";
 		};
 		F3B3CE57EC7FE2144AC379B9 /* Pods */ = {
@@ -622,8 +656,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C0AEA31E2C2E8300E81CA8 /* NSDateComponents.swift in Sources */,
 				A539BA281DC8B74000920711 /* ViewController.swift in Sources */,
 				A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */,
+				A5DBFD9A1E2C107D0084BEB2 /* CarePlanData.swift in Sources */,
+				A5D6F3531E2C218400A19AC8 /* Colors.swift in Sources */,
 				A59591831E2A6D18003CB7E9 /* TabBarViewController.swift in Sources */,
 				A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */,
 				A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */,

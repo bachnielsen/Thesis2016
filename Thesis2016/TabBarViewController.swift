@@ -12,8 +12,10 @@ import ResearchKit
 
 
 
-class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     fileprivate let carePlanStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
+    fileprivate let carePlanData: CarePlanData
+
     
 //    fileprivate var careCardViewController: OCKCareCardViewController!
 
@@ -24,6 +26,8 @@ class TabBarViewController: UITabBarController {
 //    viewController.maskImageTintColor = UIColor.darkGreen()
     
     required init?(coder aDecoder: NSCoder) {
+        carePlanData = CarePlanData(carePlanStore: carePlanStoreManager.store)
+        
         super.init(coder: aDecoder)
         
 //        let careCardStack = createCareCardStack()
@@ -31,12 +35,12 @@ class TabBarViewController: UITabBarController {
 //        let insightsStack = createInsightsStack()
 //        let connectStack = createConnectStack()
         
-        self.viewControllers = [
-            UINavigationController(rootViewController: createHomeViewController()),
-            UINavigationController(rootViewController: createInsightsViewController()),
-            UINavigationController(rootViewController: createCareCardStack()),
-            UINavigationController(rootViewController: createContactsViewController())
-        ]
+        self.viewControllers = [UINavigationController(rootViewController: createCareCardStack())]
+//            UINavigationController(rootViewController: createHomeViewController()),
+//            UINavigationController(rootViewController: createInsightsViewController()),
+//            
+//            UINavigationController(rootViewController: createContactsViewController())
+//        ]
 
         
 //        tabBar.tintColor = UIColor.darkOrange()
@@ -46,51 +50,55 @@ class TabBarViewController: UITabBarController {
 //    fileprivate func createInsightsViewController() -> UINavigationController {
 //        let viewController = OCKInsightsViewController(insightItems: carePlanStoreManager.insights, headerTitle: "Chart Placeholder", headerSubtitle: "")
 //    }
-    fileprivate func createHomeViewController() -> OCKCareCardViewController {
-        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
-        viewController.maskImage = UIImage(named: "heart")
-        viewController.smallMaskImage = UIImage(named: "small-heart")
-        //viewController.maskImageTintColor = UIColor.red
-        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
-        viewController.title = "Home"
-        
-        return viewController
-    }
     
-    fileprivate func createInsightsViewController() -> OCKCareCardViewController {
-        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
-        viewController.maskImage = UIImage(named: "heart")
-        viewController.smallMaskImage = UIImage(named: "small-heart")
-        //viewController.maskImageTintColor = UIColor.red
-        viewController.tabBarItem = UITabBarItem(title: "Insights", image: UIImage(named: "insights"), selectedImage: UIImage(named: "insights-filled"))
-        viewController.title = "Insights"
-        
-        return viewController
-    }
-    
+
+//    fileprivate func createHomeViewController() -> OCKCareCardViewController {
+//        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
+//        viewController.maskImage = UIImage(named: "heart")
+//        viewController.smallMaskImage = UIImage(named: "small-heart")
+//        //viewController.maskImageTintColor = UIColor.red
+//        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+//        viewController.title = "Home"
+//        
+//        return viewController
+//    }
+//    
+//    fileprivate func createInsightsViewController() -> OCKCareCardViewController {
+//        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
+//        viewController.maskImage = UIImage(named: "heart")
+//        viewController.smallMaskImage = UIImage(named: "small-heart")
+//        //viewController.maskImageTintColor = UIColor.blue
+//        viewController.tabBarItem = UITabBarItem(title: "Insights", image: UIImage(named: "insights"), selectedImage: UIImage(named: "insights-filled"))
+//        viewController.title = "Insights"
+//        
+//        return viewController
+//    }
+//    
     
     fileprivate func createCareCardStack() -> OCKCareCardViewController {
         let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
-        viewController.maskImage = UIImage(named: "heart")
-        viewController.smallMaskImage = UIImage(named: "small-heart")
+        
+        //viewController.maskImage = UIImage(named: "heart")
+        //viewController.smallMaskImage = UIImage(named: "small-heart")
         //viewController.maskImageTintColor = UIColor.red
-        viewController.tabBarItem = UITabBarItem(title: "Care Card", image: UIImage(named: "carecard"), selectedImage: UIImage(named: "carecard-filled"))
+        
         viewController.title = "Care Card"
+        viewController.tabBarItem = UITabBarItem(title: "Care Card", image: UIImage(named: "carecard"), selectedImage: UIImage(named: "carecard-filled"))
         
         return viewController
         //return UINavigationController(rootViewController: viewController)
     }
     
-    fileprivate func createContactsViewController() -> OCKCareCardViewController {
-        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
-        viewController.maskImage = UIImage(named: "heart")
-        viewController.smallMaskImage = UIImage(named: "small-heart")
-        //viewController.maskImageTintColor = UIColor.red
-        viewController.tabBarItem = UITabBarItem(title: "Contacts", image: UIImage(named: "connect"), selectedImage: UIImage(named: "connect-filled"))
-        viewController.title = "Contacts"
-        
-        return viewController
-    }
+//    fileprivate func createContactsViewController() -> OCKCareCardViewController {
+//        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
+//        viewController.maskImage = UIImage(named: "heart")
+//        viewController.smallMaskImage = UIImage(named: "small-heart")
+//        //viewController.maskImageTintColor = UIColor.red
+//        viewController.tabBarItem = UITabBarItem(title: "Contacts", image: UIImage(named: "connect"), selectedImage: UIImage(named: "connect-filled"))
+//        viewController.title = "Contacts"
+//        
+//        return viewController
+//    }
     
     
     override func viewDidLoad() {
@@ -98,5 +106,5 @@ class TabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
     }
-
+    
 }
