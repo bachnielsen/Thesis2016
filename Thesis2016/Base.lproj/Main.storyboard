@@ -22,130 +22,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHj-gK-fLO">
-                                <rect key="frame" x="36" y="154" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Cfk-aV-zmK"/>
-                                </constraints>
-                                <state key="normal" title="Consent"/>
-                                <connections>
-                                    <action selector="consentTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oKS-z1-KGc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-rD-hNw">
-                                <rect key="frame" x="36" y="204" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BAh-8F-TmM"/>
-                                </constraints>
-                                <state key="normal" title="Survey"/>
-                                <connections>
-                                    <action selector="surveyTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L5X-2S-WRv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4G-o8-5Im">
-                                <rect key="frame" x="36" y="254" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5co-ED-M7B"/>
-                                </constraints>
-                                <state key="normal" title="Physical Activity"/>
-                                <connections>
-                                    <action selector="physActTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAG-8t-Qr4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn0-ox-6Oe">
-                                <rect key="frame" x="24" y="104" width="327" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JPw-Z1-sfE"/>
-                                </constraints>
-                                <state key="normal" title="Bodily Pain"/>
-                                <connections>
-                                    <action selector="bodilyPainTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDR-Tg-JbA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-uH-7Fh">
-                                <rect key="frame" x="36" y="412" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WHL-fg-xlX"/>
-                                </constraints>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startDistanceWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R88-mN-0vi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-YB-doJ" userLabel="Distance Label">
-                                <rect key="frame" x="36" y="354" width="303" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="ee5-3O-jxy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-Kz-rQa">
-                                <rect key="frame" x="36" y="304" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="xPH-oR-OvS"/>
-                                </constraints>
-                                <state key="normal" title="Role Functioning Physical"/>
-                                <connections>
-                                    <action selector="RFPhysTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7QG-YP-Gwn"/>
-                                </connections>
-                            </button>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG5-xi-0bj">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items/>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHj-gK-fLO">
+                                <rect key="frame" x="35" y="219" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Consent"/>
+                                <connections>
+                                    <action selector="consentTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oKS-z1-KGc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4G-o8-5Im">
+                                <rect key="frame" x="35" y="257" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Physical Activity"/>
+                                <connections>
+                                    <action selector="physActTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAG-8t-Qr4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn0-ox-6Oe">
+                                <rect key="frame" x="24" y="295" width="327" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bodily Pain"/>
+                                <connections>
+                                    <action selector="bodilyPainTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDR-Tg-JbA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-uH-7Fh">
+                                <rect key="frame" x="35" y="441" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startDistanceWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R88-mN-0vi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-YB-doJ" userLabel="Distance Label">
+                                <rect key="frame" x="35" y="395" width="303" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-Kz-rQa">
+                                <rect key="frame" x="35" y="143" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Role Functioning Physical"/>
+                                <connections>
+                                    <action selector="RFPhysTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7QG-YP-Gwn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-rD-hNw">
+                                <rect key="frame" x="35" y="181" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Survey"/>
+                                <connections>
+                                    <action selector="surveyTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L5X-2S-WRv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Efc-uH-7Fh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1z8-Hn-Txz"/>
-                            <constraint firstItem="PQH-YB-doJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2k6-LP-agP"/>
-                            <constraint firstItem="yHj-gK-fLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3eF-bD-n3n"/>
-                            <constraint firstItem="n4G-o8-5Im" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="4Zd-Ns-ZbS"/>
-                            <constraint firstItem="7vq-Kz-rQa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6IK-q2-XNI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FDg-rD-hNw" secondAttribute="trailing" constant="20" id="AzA-2d-eOa"/>
-                            <constraint firstItem="PQH-YB-doJ" firstAttribute="top" secondItem="7vq-Kz-rQa" secondAttribute="bottom" constant="20" id="EWD-79-r8k"/>
-                            <constraint firstItem="n4G-o8-5Im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GX3-Ks-oWg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7vq-Kz-rQa" secondAttribute="trailing" constant="20" id="JCU-W1-jph"/>
-                            <constraint firstItem="Efc-uH-7Fh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="JjH-3Y-sM0"/>
-                            <constraint firstItem="Wn0-ox-6Oe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Lht-6w-iIz"/>
-                            <constraint firstItem="7vq-Kz-rQa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LoN-On-pJP"/>
-                            <constraint firstItem="FDg-rD-hNw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="OGs-GH-D0t"/>
-                            <constraint firstItem="7vq-Kz-rQa" firstAttribute="top" secondItem="n4G-o8-5Im" secondAttribute="bottom" constant="20" id="P5i-RG-qwQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wn0-ox-6Oe" secondAttribute="trailing" constant="8" id="R8Y-QI-fGh"/>
-                            <constraint firstItem="PQH-YB-doJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="UCB-oA-z2O"/>
-                            <constraint firstItem="Wn0-ox-6Oe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="WC1-ko-qJD"/>
-                            <constraint firstItem="7vq-Kz-rQa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="XW6-nw-Rkh"/>
-                            <constraint firstItem="FDg-rD-hNw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xx0-l0-Tcr"/>
-                            <constraint firstItem="Efc-uH-7Fh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZOr-97-Aqv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Efc-uH-7Fh" secondAttribute="trailing" constant="20" id="Zua-S8-mzT"/>
-                            <constraint firstItem="yHj-gK-fLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZ7-yz-ZGB"/>
-                            <constraint firstItem="n4G-o8-5Im" firstAttribute="top" secondItem="FDg-rD-hNw" secondAttribute="bottom" constant="20" id="bkT-vu-flY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n4G-o8-5Im" secondAttribute="trailing" constant="20" id="d8c-s3-emL"/>
-                            <constraint firstItem="yHj-gK-fLO" firstAttribute="top" secondItem="Wn0-ox-6Oe" secondAttribute="bottom" constant="20" id="dFB-He-XT8"/>
-                            <constraint firstItem="FDg-rD-hNw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fV9-hk-Hre"/>
-                            <constraint firstItem="Wn0-ox-6Oe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hsZ-Aa-QWR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yHj-gK-fLO" secondAttribute="trailing" constant="20" id="l8g-1O-U4o"/>
-                            <constraint firstItem="PQH-YB-doJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lE0-DW-DIK"/>
-                            <constraint firstItem="yHj-gK-fLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="sQ6-pe-nhg"/>
-                            <constraint firstItem="Efc-uH-7Fh" firstAttribute="top" secondItem="PQH-YB-doJ" secondAttribute="bottom" constant="20" id="vCp-pr-zhc"/>
-                            <constraint firstItem="FDg-rD-hNw" firstAttribute="top" secondItem="yHj-gK-fLO" secondAttribute="bottom" constant="20" id="vGs-yy-njf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PQH-YB-doJ" secondAttribute="trailing" constant="20" id="yOm-DK-9ng"/>
-                            <constraint firstItem="n4G-o8-5Im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zBb-gy-g99"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="TWV-v6-1WD"/>
                     <navigationItem key="navigationItem" id="If8-U1-Jes"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="bodyPainBtn" destination="Wn0-ox-6Oe" id="d1m-br-cUO"/>
+                        <outlet property="consentBtn" destination="yHj-gK-fLO" id="AcI-iT-1BA"/>
                         <outlet property="distanceLabel" destination="PQH-YB-doJ" id="5j4-YC-11P"/>
+                        <outlet property="physActBtn" destination="n4G-o8-5Im" id="DjG-ue-kgY"/>
+                        <outlet property="rolePhysBtn" destination="7vq-Kz-rQa" id="LQb-2K-hDC"/>
                         <outlet property="startButton" destination="Efc-uH-7Fh" id="HBW-uH-M5K"/>
+                        <outlet property="surveyBtn" destination="FDg-rD-hNw" id="slX-lH-Qgo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="-1558"/>
+            <point key="canvasLocation" x="2309.5999999999999" y="-1558.4707646176912"/>
         </scene>
         <!--Insights-->
         <scene sceneID="4hc-65-W7d">
@@ -187,7 +144,6 @@
         <!--Navigation Controller-->
         <scene sceneID="fLK-tE-vP2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRt-LL-cYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GzQ-UX-IRu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gzG-kL-jUa">
@@ -196,6 +152,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRt-LL-cYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="138.38028169014083"/>
         </scene>

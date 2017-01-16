@@ -10,9 +10,12 @@ import UIKit
 import ResearchKit
 
 
-class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocationManagerDelegate {
-
+class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocationManagerDelegate, UIScrollViewDelegate {
+    
     let healthManager:HealthManager = HealthManager()
+    let scrollView = UIScrollView(frame: UIScreen.main.bounds)
+    
+    
     
     //http://www.appcoda.com/healthkit-introduction/
     var zeroTime = TimeInterval()
@@ -22,8 +25,14 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var distanceTraveled = 0.0
+    @IBOutlet weak var rolePhysBtn: UIButton!
+    @IBOutlet weak var surveyBtn: UIButton!
+    @IBOutlet weak var consentBtn: UIButton!
+    @IBOutlet weak var physActBtn: UIButton!
+    @IBOutlet weak var bodyPainBtn: UIButton!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    
     
     //Start/stop button
     var launchBool: Bool = false {
@@ -38,10 +47,28 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let btnImage = UIImage(named: "Playbutton") as UIImage?
+        let buttonPlay = UIButton(type: UIButtonType.custom) as UIButton
+        let rectWidth:CGFloat = 33
+        let rectHeight:CGFloat = 51
+        //        let rectCornerRadius:CGFloat = 19.0
         
+        // Find center of actual frame to set rectangle in middle
+        let xf:CGFloat = (self.view.frame.width  - rectWidth)  / 2
+        let yf:CGFloat = (self.view.frame.height - rectHeight) / 2
+        
+        
+        
+        buttonPlay.frame = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
+        buttonPlay.setImage(btnImage, for: UIControlState.normal)
+        buttonPlay.addTarget(self, action: #selector(self.btnTouched), for:.touchUpInside)
+
+
         // Do any additional setup after loading the view, typically from a nib.
         
         startButton.setTitle("Start", for: .normal)
+        self.scrollView.addSubview(startButton)
         
         //http://www.appcoda.com/healthkit-introduction/
         locationManager.requestWhenInUseAuthorization()
@@ -55,6 +82,26 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         
         // We cannot access the user's HealthKit data without specific permission.
         authorizeHealthKit()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.view.addSubview(scrollView)
+        
+        self.scrollView.contentSize = CGSize(width:375, height: 1667)
+        self.scrollView.showsVerticalScrollIndicator = false
+        self.scrollView.showsHorizontalScrollIndicator = false
+        self.scrollView.bounces = false
+        
+        self.scrollView.addSubview(rolePhysBtn)
+        self.scrollView.addSubview(surveyBtn)
+        self.scrollView.addSubview(consentBtn)
+        self.scrollView.addSubview(physActBtn)
+        self.scrollView.addSubview(bodyPainBtn)
+        self.scrollView.addSubview(distanceLabel)
+        self.scrollView.addSubview(startButton)
+        self.scrollView.addSubview(buttonPlay)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,12 +139,30 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         }
         
     }
+    func btnTouched(sender: AnyObject!){
+        // Your action
+        print ("Touched")
+        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+        taskViewController.delegate = self
+        present(taskViewController, animated: true, completion: nil)
+    }
+
+//    @IBAction func btnPushButton(button: PlayButtonView) {
+//        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+//        taskViewController.delegate = self
+//        present(taskViewController, animated: true, completion: nil)   
+//    }
     
     @IBAction func consentTapped(sender : AnyObject) {
         let taskViewController = ORKTaskViewController(task: ConsentTask, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }
+//    @IBAction func playBtnPushed(_ sender: PlayButtonView) {
+//        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+//        taskViewController.delegate = self
+//        present(taskViewController, animated: true, completion: nil)
+//    }
     
     @IBAction func surveyTapped(sender : AnyObject) {
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
