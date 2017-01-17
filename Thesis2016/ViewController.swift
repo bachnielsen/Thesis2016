@@ -14,6 +14,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     
     let healthManager:HealthManager = HealthManager()
     let scrollView = UIScrollView(frame: UIScreen.main.bounds)
+//    let navigationBarAppearace = UINavigationBar.appearance()
     
     
     
@@ -48,6 +49,16 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        //UINavigationBar.appearance().barTintColor = Colors.flatGreen.color
+//        self.navigationBarAppearace.tintColor = UIColor.white
+//        self.navigationBarAppearace.barTintColor = Colors.flatGreen.color
+//        
+//        self.navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+//        
+        self.title = "Hearty"
+
+      
+        
         let btnImage = UIImage(named: "Playbutton") as UIImage?
         let buttonPlay = UIButton(type: UIButtonType.custom) as UIButton
         let rectWidth:CGFloat = 33
@@ -63,8 +74,17 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         buttonPlay.frame = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
         buttonPlay.setImage(btnImage, for: UIControlState.normal)
         buttonPlay.addTarget(self, action: #selector(self.btnTouched), for:.touchUpInside)
+        self.scrollView.addSubview(buttonPlay)
 
+        
+        //Top bar
 
+        let k = DrawRectangles(frame: CGRect(x: 0, y: 50, width: 375, height: 110))
+
+        
+        self.scrollView.addSubview(k)
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         startButton.setTitle("Start", for: .normal)
@@ -83,6 +103,23 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         // We cannot access the user's HealthKit data without specific permission.
         authorizeHealthKit()
     }
+
+//    func drawRectangle(_: color)
+//    {
+//        let h = frame.height
+//        let w = frame.width
+//        let color:UIColor = UIColor.yellow
+//        
+//        let drect = CGRect(x: (w * 0.25), y: (h * 0.25), width: (w * 0.5), height: (h * 0.5))
+//        let bpath:UIBezierPath = UIBezierPath(rect: drect)
+//        
+//        color.set()
+//        bpath.stroke()
+//        
+//        print("it ran")
+//        NSLog("drawRect has updated the view")
+//    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -100,7 +137,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         self.scrollView.addSubview(bodyPainBtn)
         self.scrollView.addSubview(distanceLabel)
         self.scrollView.addSubview(startButton)
-        self.scrollView.addSubview(buttonPlay)
+        
         
     }
 
@@ -142,7 +179,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     func btnTouched(sender: AnyObject!){
         // Your action
         print ("Touched")
-        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+        let taskViewController = ORKTaskViewController(task: SF36, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }
@@ -182,7 +219,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     }
 
     @IBAction func RFPhysTapped(sender : AnyObject) {
-        let taskViewController = ORKTaskViewController(task: PhysicalFunctioningTask, taskRun: nil)
+        let taskViewController = ORKTaskViewController(task: SF36, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }

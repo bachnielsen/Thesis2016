@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Thesis2016" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,8 +86,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="TWV-v6-1WD"/>
-                    <navigationItem key="navigationItem" id="If8-U1-Jes"/>
+                    <navigationItem key="navigationItem" id="If8-U1-Jes">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="S6A-3v-SG9">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -102,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309.5999999999999" y="-1558.4707646176912"/>
+            <point key="canvasLocation" x="3248.8000000000002" y="-1558.4707646176912"/>
         </scene>
         <!--Insights-->
         <scene sceneID="4hc-65-W7d">
@@ -141,21 +144,6 @@
             </objects>
             <point key="canvasLocation" x="209" y="1434"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fLK-tE-vP2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GzQ-UX-IRu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gzG-kL-jUa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRt-LL-cYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="135" y="138.38028169014083"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wgb-9z-feV">
             <objects>
@@ -168,7 +156,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cqB-pZ-WIO"/>
+                        <segue destination="II3-z8-VRp" kind="relationship" relationship="viewControllers" id="cqB-pZ-WIO"/>
                         <segue destination="usU-6S-p3p" kind="relationship" relationship="viewControllers" id="s0B-8C-apz"/>
                         <segue destination="xmB-E3-o4E" kind="relationship" relationship="viewControllers" id="n7R-Kf-rsi"/>
                         <segue destination="L6p-dd-6EM" kind="relationship" relationship="viewControllers" id="Flo-hB-Gmg"/>
@@ -214,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rD-tE-nQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="376"/>
+            <point key="canvasLocation" x="1322" y="1087"/>
         </scene>
         <!--Home-->
         <scene sceneID="mGw-LC-05b">
@@ -351,12 +339,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSj-bq-Xpc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105" y="-1558"/>
+            <point key="canvasLocation" x="4044" y="-1558.4707646176912"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="3ae-E8-l0i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="II3-z8-VRp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="TWV-v6-1WD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WmW-dK-xIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.18431372549019609" green="0.61176470588235299" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mzb-dU-dT6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxz-19-YNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.5999999999999" y="-1558.4707646176912"/>
         </scene>
     </scenes>
     <resources>
         <image name="carekit" width="24" height="24"/>
         <image name="chart" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
     </resources>
 </document>

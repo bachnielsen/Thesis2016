@@ -15,6 +15,7 @@ import ResearchKit
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     fileprivate let carePlanStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
     fileprivate let carePlanData: CarePlanData
+//    let navigationBarAppearace = UINavigationBar.appearance()
 
     
 //    fileprivate var careCardViewController: OCKCareCardViewController!
@@ -85,6 +86,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         viewController.title = "Care Card"
         viewController.tabBarItem = UITabBarItem(title: "Care Card", image: UIImage(named: "carecard"), selectedImage: UIImage(named: "carecard-filled"))
         
+//        self.navigationBarAppearace.tintColor = nil
+//        self.navigationBarAppearace.barTintColor = nil
+//        
+//        self.navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         return viewController
         //return UINavigationController(rootViewController: viewController)
     }
