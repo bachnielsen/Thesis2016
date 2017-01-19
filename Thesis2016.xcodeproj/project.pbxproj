@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		0944824545398993AFE99F3B /* Pods_Thesis2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BA6BC58ECE81A169DCBB58 /* Pods_Thesis2016Tests.framework */; };
 		56C5E69B39549FE4C4A701F1 /* Pods_Thesis2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */; };
+		A50139A91E30EB8E00B55659 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50139A81E30EB8E00B55659 /* ConnectViewController.swift */; };
 		A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA871DCDF84C00E46853 /* ConsentTask.swift */; };
 		A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA8C1DCE135700E46853 /* SurveyTask.swift */; };
+		A50F01921E310EAA0080510E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F01911E310EAA0080510E /* ViewController.xib */; };
 		A52B91DE1E2A739B003251A6 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; };
 		A52B91DF1E2A739B003251A6 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */; };
@@ -116,8 +118,10 @@
 		1C20754DE0DF132BEF7A1FBA /* Pods-Thesis2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016/Pods-Thesis2016.release.xcconfig"; sourceTree = "<group>"; };
 		554E409EA015EA3FB24FE630 /* Pods-Thesis2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016Tests/Pods-Thesis2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		88B31A01AA3FCC5A62C2018B /* Pods-Thesis2016UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016UITests/Pods-Thesis2016UITests.release.xcconfig"; sourceTree = "<group>"; };
+		A50139A81E30EB8E00B55659 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		A501DA871DCDF84C00E46853 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		A501DA8C1DCE135700E46853 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		A50F01911E310EAA0080510E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCKSample.xcodeproj; path = ../../../../carekit/Sample/OCKSample.xcodeproj; sourceTree = "<group>"; };
 		A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
@@ -234,13 +238,15 @@
 				A539BA251DC8B74000920711 /* AppDelegate.swift */,
 				A59591821E2A6D18003CB7E9 /* TabBarViewController.swift */,
 				A539BA291DC8B74000920711 /* Main.storyboard */,
+				A50F01911E310EAA0080510E /* ViewController.xib */,
 				A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */,
+				A539BA271DC8B74000920711 /* ViewController.swift */,
+				A50139A81E30EB8E00B55659 /* ConnectViewController.swift */,
 				A5DBFD931E2C105B0084BEB2 /* Care Plan Store */,
 				A5C0AEA91E2C2EF800E81CA8 /* Utilities */,
 				A5C0AEAA1E2C2F6E00E81CA8 /* Support Files */,
 				A539BA541DC8BA9E00920711 /* Frameworks */,
 				A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */,
-				A539BA271DC8B74000920711 /* ViewController.swift */,
 				A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */,
 				A501DA8C1DCE135700E46853 /* SurveyTask.swift */,
 				A501DA871DCDF84C00E46853 /* ConsentTask.swift */,
@@ -502,6 +508,7 @@
 			files = (
 				A539BA301DC8B74000920711 /* LaunchScreen.storyboard in Resources */,
 				A539BA2D1DC8B74000920711 /* Assets.xcassets in Resources */,
+				A50F01921E310EAA0080510E /* ViewController.xib in Resources */,
 				A539BA2B1DC8B74000920711 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +690,7 @@
 				A5BFCEC01DFC24A500FA187D /* PhysicalFunctioningTask.swift in Sources */,
 				A539BA261DC8B74000920711 /* AppDelegate.swift in Sources */,
 				A5BFCEB51DF96E0300FA187D /* BodilyPainTask.swift in Sources */,
+				A50139A91E30EB8E00B55659 /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

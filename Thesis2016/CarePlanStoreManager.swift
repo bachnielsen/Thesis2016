@@ -14,7 +14,7 @@ class CarePlanStoreManager: NSObject {
     // MARK: Static Properties
     
     static var sharedCarePlanStoreManager = CarePlanStoreManager()
-    var store: OCKCarePlanStore
+    let store: OCKCarePlanStore
     
 //    var insights: [OCKInsightItem] {
 //        return insightsBuilder.insights
@@ -22,7 +22,7 @@ class CarePlanStoreManager: NSObject {
 //    
 //    fileprivate let insightsBuilder: InsightsBuilder
 
-    override init() {
+    fileprivate override init() {
         let fileManager = FileManager.default
         guard let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).last else {
             fatalError("*** Error: Unable to get the document directory! ***")
@@ -40,6 +40,9 @@ class CarePlanStoreManager: NSObject {
 //        insightsBuilder = InsightsBuilder(carePlanStore: store)
         
         super.init()
+        
+        // Register this object as the store's delegate to be notified of changes.
+//        store.delegate = self
         
 //        // Start to build the initial array of insights.
 //        updateInsights()

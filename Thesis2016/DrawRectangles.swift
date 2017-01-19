@@ -27,7 +27,13 @@ class DrawRectangles: UIView {
     }
     
     
-    override func draw(_ rect: CGRect) {
+    func draw(_ rect: CGRect, ofColor rectColor: UIColor, strokeColor lineColor: UIColor, inView view:UIView) {
+        let path = UIBezierPath(rect: rect)
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = rectColor.cgColor
+        shapeLayer.strokeColor = lineColor.cgColor
 //        let h = frame.height
 //        let w = frame.width
 //        let color:UIColor = UIColor.red
@@ -37,12 +43,14 @@ class DrawRectangles: UIView {
         
 //        color.set()
 //        bpath.stroke()
+    
         
-        let path = UIBezierPath(rect: rect)
-        UIColor.gray.setStroke()
-        UIColor.white.setFill()
-        path.fill()
-        path.stroke()
+        view.layer.addSublayer(shapeLayer)
+//        let path = UIBezierPath(rect: rect)
+//        UIColor.gray.setStroke()
+//        UIColor.white.setFill()
+//        path.fill()
+//        path.stroke()
     }
 
 }

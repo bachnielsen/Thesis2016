@@ -17,12 +17,76 @@ enum ActivityIdentifier: String {
 class CarePlanData: NSObject {
     let carePlanStore: OCKCarePlanStore
     
+//    let contacts: [OCKContact] = [
+//        OCKContact(contactType: .careTeam,
+//                   name: "Dr. Maria Ruiz",
+//                   relation: "Physician",
+//                   contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .email("mruiz2@mac.com")],
+//                   tintColor: Colors.blue.color,
+//                   monogram: "MR",
+//                   image: nil),
+//        
+//        OCKContact(contactType: .careTeam,
+//                   name: "Bill James",
+//                   relation: "Nurse",
+//                   contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .email("billjames2@mac.com")],
+//                   tintColor: Colors.green.color,
+//                   monogram: nil,
+//                   image: nil),
+//        
+//        OCKContact(contactType: .personal,
+//                   name: "Tom Clark",
+//                   relation: "Father",
+//                   contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .facetimeVideo("8885555512", display: "888-555-5512")],
+//                   tintColor: Colors.yellow.color,
+//                   monogram: nil,
+//                   image: nil)
+//    ]
+//    let newContact = OCKContact(contactType: .careTeam,
+//                                name: "Bill James",
+//                                relation: "Nurse",
+//                                tintColor: Colors.green.color,
+//                                phoneNumber: CNPhoneNumber(stringValue: "888-555-5512"),
+//                                messageNumber: CNPhoneNumber(stringValue: "888-555-5512"),
+//                                emailAddress: "billjames@example.com",
+//                                monogram: "BJ",
+//                                image: nil)
+    let contacts =
+        [OCKContact(contactType: .personal,
+                    name: "Daniel Hansen",
+                    relation: "Son",
+                    tintColor: nil,
+                    phoneNumber: CNPhoneNumber(stringValue: "888-555-5512"),
+                    messageNumber: CNPhoneNumber(stringValue: "888-555-5512"),
+                    emailAddress: "shaunofthedead@example.com",
+                    monogram: "DH",
+                    image: nil),
+         OCKContact(contactType: .careTeam,
+                    name: "Lotte Ringsted",
+                    relation: "Wife",
+                    tintColor: nil,
+                    phoneNumber: CNPhoneNumber(stringValue: "888-555-5235"),
+                    messageNumber: CNPhoneNumber(stringValue: "888-555-5235"),
+                    emailAddress: "wife@example.com",
+                    monogram: "LR",
+                    image: nil),
+         OCKContact(contactType: .careTeam,
+                    name: "Dr Gertrud Hansen",
+                    relation: "Doctor",
+                    tintColor: nil,
+                    phoneNumber: CNPhoneNumber(stringValue: "888-555-2351"),
+                    messageNumber: CNPhoneNumber(stringValue: "888-555-2351"),
+                    emailAddress: "dr.gertrud@example.com",
+                    monogram: "GH",
+                    image: nil)]
+    
+    
     class func dailyScheduleRepeating(occurencesPerDay: UInt) -> OCKCareSchedule {
         return OCKCareSchedule.dailySchedule(withStartDate: DateComponents.firstDateOfCurrentWeek,
                                              occurrencesPerDay: occurencesPerDay)
     }
     
-    init(carePlanStore: OCKCarePlanStore) {
+    required init(carePlanStore: OCKCarePlanStore) {
         self.carePlanStore = carePlanStore
         
         //TODO: Define intervention activities
@@ -44,7 +108,7 @@ class CarePlanData: NSObject {
             identifier: ActivityIdentifier.questions.rawValue,
             groupIdentifier: nil,
             type: .intervention,
-            title: "Questions taken",
+            title: "Questions answered",
             text: nil,
             tintColor: Colors.blue.color,
             instructions: "It is adviseable to answer questions regarding your health daily, to get a better understanding of your health related quality of life.",
@@ -65,6 +129,7 @@ class CarePlanData: NSObject {
             schedule:CarePlanData.dailyScheduleRepeating(occurencesPerDay: 2),
             resultResettable: true,
             userInfo: nil)
+        
         //TODO: Define assessment activities
         
         super.init()
@@ -74,6 +139,9 @@ class CarePlanData: NSObject {
         for activity in [medicationActivity, questionsActivity, walkingActivity] {
                             add(activity: activity)
         }
+        
+        
+        
     }
     
     func add(activity: OCKCarePlanActivity) {
@@ -86,5 +154,15 @@ class CarePlanData: NSObject {
             
             strongSelf.carePlanStore.add(activity, completion: { _ in })
         }
+    }
+    func generateSampleDocument() -> OCKDocument {
+        let subtitle = OCKDocumentElementSubtitle(subtitle: "First subtitle")
+        
+        let paragraph = OCKDocumentElementParagraph(content: "Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque.")
+        
+        let document = OCKDocument(title: "Sample Document Title", elements: [subtitle, paragraph])
+        document.pageHeader = "App Name: OCKSample, User Name: John Appleseed"
+        
+        return document
     }
 }
