@@ -33,11 +33,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Testing the app</string>
-    <key>NSHealthUpdateUsageDescription</key>
-    <string>testing app</string>
-    <key>NSHealthShareUsageDescription</key>
-    <string>testing app</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Testing the app</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>testing app</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>testing app</string>
 </dict>
 </plist>

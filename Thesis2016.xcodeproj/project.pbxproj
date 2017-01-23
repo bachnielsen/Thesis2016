@@ -13,6 +13,7 @@
 		A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA871DCDF84C00E46853 /* ConsentTask.swift */; };
 		A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501DA8C1DCE135700E46853 /* SurveyTask.swift */; };
 		A50F01921E310EAA0080510E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F01911E310EAA0080510E /* ViewController.xib */; };
+		A50F01991E3217710080510E /* OCKInsightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F01981E3217710080510E /* OCKInsightItem.swift */; };
 		A52B91DE1E2A739B003251A6 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; };
 		A52B91DF1E2A739B003251A6 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A52B91DB1E2A7393003251A6 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */; };
@@ -25,6 +26,8 @@
 		A539BA461DC8B74000920711 /* Thesis2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA451DC8B74000920711 /* Thesis2016UITests.swift */; };
 		A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */; };
 		A55890C11DF0380100EA2A34 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A564A95A1DCA1156007F6B46 /* HealthKit.framework */; };
+		A574C52D1E3642CF00984E45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574C52C1E3642CF00984E45 /* SettingsViewController.swift */; };
+		A574C5341E3651D700984E45 /* SettingsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574C5331E3651D700984E45 /* SettingsViewController2.swift */; };
 		A583A05C1E2CFCA6002D2870 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */; };
 		A583A05E1E2D874A002D2870 /* DrawRectangles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583A05D1E2D874A002D2870 /* DrawRectangles.swift */; };
 		A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */; };
@@ -122,6 +125,7 @@
 		A501DA871DCDF84C00E46853 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		A501DA8C1DCE135700E46853 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		A50F01911E310EAA0080510E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		A50F01981E3217710080510E /* OCKInsightItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCKInsightItem.swift; sourceTree = "<group>"; };
 		A52B91D41E2A7392003251A6 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../../carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
 		A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCKSample.xcodeproj; path = ../../../../carekit/Sample/OCKSample.xcodeproj; sourceTree = "<group>"; };
 		A52B91F01E2A9020003251A6 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanStoreManager.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		A55890BD1DF0372F00EA2A34 /* Thesis2016.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thesis2016.xcdatamodel; sourceTree = "<group>"; };
 		A55890BF1DF037AA00EA2A34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A564A95A1DCA1156007F6B46 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A574C52C1E3642CF00984E45 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A574C5331E3651D700984E45 /* SettingsViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController2.swift; sourceTree = "<group>"; };
 		A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		A583A05D1E2D874A002D2870 /* DrawRectangles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawRectangles.swift; sourceTree = "<group>"; };
 		A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
@@ -241,6 +247,8 @@
 				A50F01911E310EAA0080510E /* ViewController.xib */,
 				A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */,
 				A539BA271DC8B74000920711 /* ViewController.swift */,
+				A574C52C1E3642CF00984E45 /* SettingsViewController.swift */,
+				A574C5331E3651D700984E45 /* SettingsViewController2.swift */,
 				A50139A81E30EB8E00B55659 /* ConnectViewController.swift */,
 				A5DBFD931E2C105B0084BEB2 /* Care Plan Store */,
 				A5C0AEA91E2C2EF800E81CA8 /* Utilities */,
@@ -254,9 +262,10 @@
 				A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */,
 				A5BFCEBF1DFC24A500FA187D /* PhysicalFunctioningTask.swift */,
 				A58819DF1DEEF40D000A9CF2 /* HealthManager.swift */,
-				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
 				A583A05D1E2D874A002D2870 /* DrawRectangles.swift */,
 				A598B6C41E2DAAE200273F9B /* SF36.swift */,
+				A50F01981E3217710080510E /* OCKInsightItem.swift */,
+				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
 			);
 			path = Thesis2016;
 			sourceTree = "<group>";
@@ -674,6 +683,7 @@
 			files = (
 				A5C0AEA31E2C2E8300E81CA8 /* NSDateComponents.swift in Sources */,
 				A539BA281DC8B74000920711 /* ViewController.swift in Sources */,
+				A574C52D1E3642CF00984E45 /* SettingsViewController.swift in Sources */,
 				A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */,
 				A5DBFD9A1E2C107D0084BEB2 /* CarePlanData.swift in Sources */,
 				A5D6F3531E2C218400A19AC8 /* Colors.swift in Sources */,
@@ -681,9 +691,11 @@
 				A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */,
 				A501DA881DCDF84C00E46853 /* ConsentTask.swift in Sources */,
 				A501DA8D1DCE135700E46853 /* SurveyTask.swift in Sources */,
+				A50F01991E3217710080510E /* OCKInsightItem.swift in Sources */,
 				A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */,
 				A583A05E1E2D874A002D2870 /* DrawRectangles.swift in Sources */,
 				A598B6C51E2DAAE200273F9B /* SF36.swift in Sources */,
+				A574C5341E3651D700984E45 /* SettingsViewController2.swift in Sources */,
 				A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */,
 				A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */,
 				A583A05C1E2CFCA6002D2870 /* PlayButtonView.swift in Sources */,

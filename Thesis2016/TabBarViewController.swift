@@ -21,7 +21,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     fileprivate var connectViewController: OCKConnectViewController!
     
-    let navigationBarAppearance = UINavigationBar.appearance()
+    fileprivate var insightsViewController: OCKInsightsViewController!
+    
+//    let navigationBarAppearance = UINavigationBar.appearance()
 
     
 //    fileprivate var careCardViewController: OCKCareCardViewController!
@@ -41,13 +43,15 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let careCardViewController = createCareCardStack()
         let connectViewController = createConnectStack()
         let homeViewController = createHomeStack()
+        let insightsViewController = createInsightsStack()
 //        let symptomTrackerStack = createSymptomTrackerStack()
 //        let insightsStack = createInsightsStack()
         
         
         self.viewControllers = [
-            UINavigationController(rootViewController: careCardViewController),
             homeViewController,
+            UINavigationController(rootViewController: insightsViewController),
+            UINavigationController(rootViewController: careCardViewController),
             UINavigationController(rootViewController: connectViewController)
         ]
         
@@ -127,17 +131,27 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         return UINavigationController(rootViewController: viewController)
     }
 
-    fileprivate func createConnectStack() -> OCKConnectViewController { //UINavigationController {// //
+    fileprivate func createConnectStack() -> OCKConnectViewController {
         let viewController = OCKConnectViewController(contacts: carePlanData.contacts)
 //        viewController.delegate = self
         
-        viewController.title = NSLocalizedString("Connect", comment: "")
-        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"connect"), selectedImage: UIImage(named: "connect-filled"))
+        viewController.title = NSLocalizedString("Contacts", comment: "")
+        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"contacts"), selectedImage: UIImage(named: "contacts"))
         
         return viewController
 //        return UINavigationController(rootViewController: viewController)
     }
-
+    
+    fileprivate func createInsightsStack() -> OCKInsightsViewController{
+        let headerTitle = NSLocalizedString("Weekly Charts", comment: "Health related quality of life overview")
+        let viewController = OCKInsightsViewController(insightItems: [OCKInsightItem.emptyInsightsMessage()]/*carePlanStoreManager.insights*/, headerTitle: headerTitle /*"Health related quality of life overview"*/, headerSubtitle: "")
+        
+        viewController.title = NSLocalizedString("Insights", comment: "")
+        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"chart"), selectedImage: UIImage(named: "chart"))
+        
+        return viewController
+    }
+    
 //    fileprivate func createContactsViewController() -> OCKCareCardViewController {
 //        let viewController = OCKCareCardViewController(carePlanStore: carePlanStoreManager.store)
 //        viewController.maskImage = UIImage(named: "heart")

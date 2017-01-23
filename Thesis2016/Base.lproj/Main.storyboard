@@ -308,7 +308,7 @@
         <!--Home-->
         <scene sceneID="mGw-LC-05b">
             <objects>
-                <viewController id="HGx-dj-eAq" customClass="ViewController" customModule="Thesis2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsID" id="HGx-dj-eAq" customClass="ViewController" customModule="Thesis2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="seR-Bj-ar4"/>
                         <viewControllerLayoutGuide type="bottom" id="Ir1-wa-9c9"/>
