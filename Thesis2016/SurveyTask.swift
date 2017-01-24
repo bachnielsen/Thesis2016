@@ -35,6 +35,25 @@ public var SurveyTask: ORKOrderedTask {
     let imageChoices : [ORKImageChoice] = colorTuples.map {
         return ORKImageChoice(normalImage: $0.0, selectedImage: nil, text: $0.1, value: $0.1 as NSCoding & NSCopying & NSObjectProtocol)
     }
+    
+    var logoImages: [UIImage] = [UIImage(named: "emoticon-cool")!,
+                                 UIImage(named: "emoticon")!,
+                                 UIImage(named: "emoticon-neutral")!,
+                                 UIImage(named: "emoticon-sad")!,
+                                 UIImage(named: "emoticon-dead")!]
+    
+//    logoImages.append(UIImage(named: "emoticon-cool")!,
+//                      UIImage(named: "emoticon")!,
+//                      UIImage(named: "emoticon-neutral")!,
+//                      UIImage(named: "emoticon-sad")!,
+//                      UIImage(named: "emoticon-dead")!)
+    
+//    logoImages += [UIImage(named: "emoticon-cool")!,
+//                   UIImage(named: "emoticon")!,
+//                   UIImage(named: "emoticon-neutral")!,
+//                   UIImage(named: "emoticon-sad")!,
+//                   UIImage(named: "emoticon-dead")!]
+    
     let colorAnswerFormat: ORKImageChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: imageChoices)
     let colorQuestionStep = ORKQuestionStep(identifier: "ImageChoiceQuestionStep", title: colorQuestionStepTitle, answer: colorAnswerFormat)
     steps += [colorQuestionStep]

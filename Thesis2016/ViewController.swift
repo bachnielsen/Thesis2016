@@ -188,7 +188,6 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
 //        topRect.draw(CGRect(x: 0, y: 64, width: 375, height: 110), ofColor: UIColor.white, strokeColor: UIColor.clear, inView: scrollView)
         let topRectH = drawRectangle(rect: CGRect(x: 0, y: 64, width: 375, height: 110), ofColor: UIColor.white, strokeColor: UIColor.clear, inView: scrollView)
 //        drawRectangle(rect: CGRect(x: 0, y: 64, width: 375, height: 110), ofColor: UIColor.white, strokeColor: UIColor.clear, inView: scrollView)
-        
 
 //        print(topRect.rect.frame.height)
         let rectWidth:CGFloat = 37
@@ -237,30 +236,70 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         subLabel.text = "The first step is to answer a 36 question survey to establish your base health related quality of life"
         subLabel.tag = 100
 
-
-        var startPos = 90
+        //Timeline
+        let storyLine = drawLineFromPoint(start: CGPoint(x: (self.view.frame.width) / 2, y: 110), toPoint: CGPoint(x: (self.view.frame.width) / 2, y: 1667), ofColor: UIColor.white, inView: scrollView)
+        
+        
+        let dateComponents = NSDate()
+        let formatterDay = DateFormatter()
+        let formatterMonth = DateFormatter()
+        formatterDay.dateFormat = "dd"
+        formatterMonth.dateFormat = "MMM "
+        let today = formatterDay.string(from: dateComponents as Date)
+        let month = formatterMonth.string(from: dateComponents as Date)
+//        let day = dateComponents.day
+//        let month = dateComponents.month
+//        var dateNo = 28
+        var startPos = CGFloat(100)
+        var startPosLabel = startPos + CGFloat(rectHeight/2)
         let startposPrint = yf+CGFloat(startPos)
         print(startposPrint)
+        var roundRectTest = drawRoundRect2(rect: CGRect(x: xf, y: yf+CGFloat(startPos), width: rectWidth, height: rectHeight), rectColor: Colors.testGreenBg.color/*.withAlphaComponent(0.20)*/, strokeColor: UIColor.white.withAlphaComponent(0.50), radiusCorner: rectCornerRadius, inView: scrollView)
         
         // Rounded rectangles - action buttons
         for _ in 1...10 {
-            let roundRectTest = drawRoundRect2(rect: CGRect(x: xf, y: yf+CGFloat(startPos), width: rectWidth, height: rectHeight), rectColor: Colors.flatGreen.color.withAlphaComponent(0.20), strokeColor: UIColor.white.withAlphaComponent(0.50), radiusCorner: rectCornerRadius, inView: scrollView)
-            roundRectTest.addTarget(self, action: #selector(self.btnInfoOvalTouched), for:.touchUpInside)
-            startPos = startPos+90
-            print("rounddrect " + String(startPos))
+            let roundRectTest = drawRoundRect2(rect: CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight), rectColor: Colors.testGreenBg.color/*.withAlphaComponent(0.20)*/, strokeColor: UIColor.white.withAlphaComponent(0.50), radiusCorner: rectCornerRadius, inView: scrollView)
+            roundRectTest.frame.origin.y = roundRectTest.frame.origin.y + startPos /*= drawRoundRect2(rect: CGRect(x: xf, y: yf+CGFloat(startPos), width: rectWidth, height: rectHeight), rectColor: Colors.testGreenBg.color/*.withAlphaComponent(0.20)*/, strokeColor: UIColor.white.withAlphaComponent(0.50), radiusCorner: rectCornerRadius, inView: scrollView)*/
+            let dateLabel = drawTipSubLabel(placementX: xf + CGFloat(55), placementY: yf+CGFloat(startPosLabel)-5, text: month + today)
+//            dateLabel.text?.append(dateNo)
+            dateLabel.textColor = UIColor.white
+//            dateLabel.backgroundColor = UIColor.brown
+            dateLabel.sizeToFit()
+            dateLabel.textAlignment = .center
+            roundRectTest.addTarget(self, action: #selector(self.btnMood), for:.touchUpInside)
+            self.scrollView.addSubview(dateLabel)
+            startPos = startPos + CGFloat(100)
+            startPosLabel = startPosLabel + CGFloat(100)
+//            dateNo += 1
+//            print(dateNo)
+            print("rounddrect " + String(describing: startPos))
         }
+        
+//        var startPosLabel = CGFloat(roundRectTest.frame.origin.y)
+//        for _ in 1...10 {
+//            let dateLabel = drawTipSubLabel(placementX: roundRectTest.frame.origin.x + CGFloat(30), placementY: startPosLabel, text: "Jan 28")
+////            let dateLabel = drawTipSubLabel(placementX: 200, placementY: 0, text: "Jan 28")
+//            dateLabel.textColor = UIColor.white
+//            startPosLabel = startPosLabel + 100
+//            self.scrollView.addSubview(dateLabel)
+//        }
+        
         // Small circles - tip buttons
-        var startPosOval = 65//buttonPlay.frame.height + CGFloat(30) //65 // (roundRect height + 30% af roundrect startpos)
+        var startPosOval = 45//buttonPlay.frame.height + CGFloat(30) //65 // (roundRect height + 30% af roundrect startpos)
+        var startPosOval2 = 100
         let xfOval:CGFloat = (self.view.frame.width  - 13)  / 2
+        let ovalInfoMood = drawInfoOval(placementX: xfOval, placementY: buttonPlay.center.y + CGFloat(startPosOval))// yf+CGFloat(startPosOval))
+        ovalInfoMood.addTarget(self, action: #selector(self.btnMood), for:.touchUpInside)
+        
         for _ in 1...5{
-            let ovalInfo = drawInfoOval(placementX: xfOval, placementY: yf+CGFloat(startPosOval))
+//            ovalInfo.frame.origin.y = ovalInfoMood.frame.origin.y + CGFloat(startPosOval)
+            let ovalInfo = drawInfoOval(placementX: xfOval, placementY: ovalInfoMood.frame.origin.y + CGFloat(startPosOval2))// roundRectTest.frame.origin.y + CGFloat(startPosOval)) //yf+CGFloat(startPosOval))
             ovalInfo.addTarget(self, action: #selector(self.btnInfoOvalTouched), for:.touchUpInside)
-            startPosOval = startPosOval + 90
+            startPosOval2 = startPosOval2 + 100
             print("oval " + String(describing: startPosOval))
         }
         
-        //Timeline
-        drawLineFromPoint(start: CGPoint(x: (self.view.frame.width) / 2, y: 110), toPoint: CGPoint(x: (self.view.frame.width) / 2, y: 1667), ofColor: UIColor.white, inView: scrollView)
+
 //        stepResultForStepIdentifier(stepIdentifier: qComplete)
         
         self.scrollView.addSubview(topLabel)
@@ -330,6 +369,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
 //        animLayer.cornerRadius = layerSize*0.5
 //        CATransaction.commit()
 //    }
+    
+
     
     func drawInfoOval(placementX: CGFloat, placementY: CGFloat) -> UIButton{
         let btnInfoOval = UIButton(type: UIButtonType.custom) as UIButton
@@ -514,6 +555,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     func btnInfoOvalDone(sender: AnyObject!) {
         print("Done!")
         let ovalInfo = sender as! UIButton
+        let ovalInfoMood = sender as! UIButton
         for viewWithTag in self.scrollView.subviews{
             if let viewWithTag = self.scrollView.viewWithTag(45) {
                 viewWithTag.removeFromSuperview()
@@ -534,6 +576,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         ovalInfo.tag = 55
         
     }
+
     func btnInfoOvalTouched(sender: AnyObject!){
 //        var isOpen = false
         // Your action
@@ -576,23 +619,13 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         self.scrollView.addSubview(tipLabel)
         self.scrollView.addSubview(tipSubLabel)
         
-//        self.scrollView.addSubview(tipSubLabel)
         newView.tag = 45
-//        ovalInfo.tag = 45
         
         UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
             
             ovalInfo.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
             self.scrollView.bringSubview(toFront: ovalInfo)
             
-//            self.scrollView.layoutIfNeeded()
-            
-//            let rectTest = self.drawRectangle(rect: CGRect(x: 0, y: ovalInfo.frame.origin.y + CGFloat(13), width: 375, height: 110), ofColor: UIColor.white, strokeColor: UIColor.clear, inView: self.scrollView)
-            
-//            let bottomConstraint = rectTest.
-//            NSLayoutConstraint(item: recTest, attribute: .bottom, relatedBy: .equal, toItem: ovalInfo, attribute: .bottom, multiplier: 5.0, constant: 5.0).isActive = true
-            
-//            self.scrollView.addSubview(ovalInfo)
         }, completion: { (finished: Bool) in
             print("Basket doors opened!")
             self.isOpen = true
@@ -601,7 +634,101 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         ovalInfo.addTarget(self, action: #selector(self.btnInfoOvalDone), for:.touchUpInside)
     }
     
+    func btnMoodDone(sender: AnyObject!){
+        print("Done!")
+        let ovalInfoMood = sender as! UIButton
+        for viewWithTag in self.scrollView.subviews{
+            if let viewWithTag = self.scrollView.viewWithTag(45) {
+                viewWithTag.removeFromSuperview()
+            }
+        }
+        //        let newVie = btnInfoOvalTouched.newView
+        //        newView.removeFromSuperview()
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
+            
+            ovalInfoMood.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            
+        }, completion: { finished in
+            print("Basket doors opened!")
+        })
+        
+        ovalInfoMood.removeTarget(self, action: #selector(self.btnMoodDone), for: .touchUpInside)
+        ovalInfoMood.addTarget(self, action: #selector(self.btnMood(sender:)), for: .touchUpInside)
+        ovalInfoMood.tag = 55
+    }
     
+    func btnMood(sender: AnyObject!){
+        // Your action
+        print ("Touched")
+        let ovalInfoMood = sender as! UIButton
+        
+        var images: [UIImage] = [UIImage(named: "emoticon-cool")!,
+                                     UIImage(named: "emoticon")!,
+                                     UIImage(named: "emoticon-neutral")!,
+                                     UIImage(named: "emoticon-sad")!,
+                                     UIImage(named: "emoticon-dead")!]
+
+        
+
+        let newView = UIView(frame: CGRect(x: 0, y: ovalInfoMood.frame.origin.y + CGFloat(6.5), width: 375, height: 110))
+        newView.backgroundColor = UIColor.white
+        
+        let imageView = UIImageView(image: images[0])
+        imageView.frame = CGRect(x: newView.frame.origin.x + 20, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+        let imageView2 = UIImageView(image: images[1])
+        imageView2.frame = CGRect(x: imageView.frame.origin.x + 68, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+        let imageView3 = UIImageView(image: images[2])
+        imageView3.frame = CGRect(x: imageView2.frame.origin.x + 68, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+        let imageView4 = UIImageView(image: images[3])
+        imageView4.frame = CGRect(x: imageView3.frame.origin.x + 68, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+        let imageView5 = UIImageView(image: images[4])
+        imageView5.frame = CGRect(x: imageView4.frame.origin.x + 68, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+//        let imageView5 = UIButton(type: UIButtonType.custom) as UIButton
+        
+        let btnImage = UIImageView(image: images[4])// as UIImage?
+        let imageBtn5 = UIButton(type: UIButtonType.custom) as UIButton
+        imageBtn5.frame = CGRect(x: imageView4.frame.origin.x + 68, y: ((newView.frame.height - imageView.frame.height) / 2), width: 48, height: 48)
+        imageBtn5.setImage(images[4], for: UIControlState.normal)
+        imageBtn5.setTitleColor(UIColor.blue, for: .normal)
+        let titRec = imageBtn5.titleRect(forContentRect: CGRect(x: 100, y: 400, width: 375, height: 110))
+        imageBtn5.setTitle("TEST", for: .normal)
+//        imageBtn5.title(for: .normal)
+        if imageBtn5.currentTitle == "TEST"{
+            print("LOL")
+        }
+        
+//        let imageView = UIImageView()
+//        imageView.frame = CGRect(x: newView.frame.origin.x, y: newView.frame.origin.x, width: 300, height: 90)
+//        imageView.image = UIImage(cgImage: image as! CGImage)
+        
+        
+        self.scrollView.addSubview(newView)
+        newView.addSubview(imageView)
+        newView.addSubview(imageView2)
+        newView.addSubview(imageView3)
+        newView.addSubview(imageView4)
+        newView.addSubview(imageBtn5)
+    
+        imageView.tag = 45
+        imageView2.tag = 45
+        imageView3.tag = 45
+        imageView4.tag = 45
+        imageBtn5.tag = 45
+        newView.tag = 45
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
+            
+            ovalInfoMood.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            self.scrollView.bringSubview(toFront: ovalInfoMood)
+            
+        }, completion: { (finished: Bool) in
+            print("Basket doors opened!")
+            self.isOpen = true
+        })
+        ovalInfoMood.removeTarget(self, action: #selector(self.btnMood), for: .touchUpInside)
+        ovalInfoMood.addTarget(self, action: #selector(self.btnMoodDone), for:.touchUpInside)
+    }
+
     func btnTouched(sender: AnyObject!){
         // Your action
         print ("Touched")
@@ -717,6 +844,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
 //            doneLabel.backgroundColor = UIColor.brown
             doneLabel.numberOfLines = 2
             doneLabel.adjustsFontSizeToFitWidth = true
+            doneLabel.textColor = UIColor.white
     
             self.scrollView.addSubview(doneLabel)
             self.scrollView.addSubview(self.buttonDone)

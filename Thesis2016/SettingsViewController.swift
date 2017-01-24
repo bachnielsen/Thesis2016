@@ -16,6 +16,10 @@ class SettingsViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+        let navigationBarHeight: CGFloat = self.navigationBar.frame.height
+        print(statusBarHeight + navigationBarHeight)
+        
         self.view.backgroundColor = UIColor.white
         self.navigationBarAppearance.backgroundColor = UIColor.blue
 //        self.navigationBar.backgroundColor = UIColor.blue

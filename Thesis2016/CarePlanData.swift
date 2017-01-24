@@ -60,8 +60,8 @@ class CarePlanData: NSObject {
                     messageNumber: CNPhoneNumber(stringValue: "888-555-5512"),
                     emailAddress: "shaunofthedead@example.com",
                     monogram: "DH",
-                    image: nil),
-         OCKContact(contactType: .careTeam,
+                    image: UIImage(named: "son") as UIImage?),
+         OCKContact(contactType: .personal,
                     name: "Lotte Ringsted",
                     relation: "Wife",
                     tintColor: nil,
@@ -69,7 +69,7 @@ class CarePlanData: NSObject {
                     messageNumber: CNPhoneNumber(stringValue: "888-555-5235"),
                     emailAddress: "wife@example.com",
                     monogram: "LR",
-                    image: nil),
+                    image: UIImage(named: "wife") as UIImage?),
          OCKContact(contactType: .careTeam,
                     name: "Dr Gertrud Hansen",
                     relation: "Doctor",
@@ -78,7 +78,7 @@ class CarePlanData: NSObject {
                     messageNumber: CNPhoneNumber(stringValue: "888-555-2351"),
                     emailAddress: "dr.gertrud@example.com",
                     monogram: "GH",
-                    image: nil)]
+                    image: UIImage(named: "nurse") as UIImage?)]
     
     
     class func dailyScheduleRepeating(occurencesPerDay: UInt) -> OCKCareSchedule {
