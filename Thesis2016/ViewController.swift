@@ -66,6 +66,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var systemVersion = UIDevice.current.systemVersion
+        print("iOS version: \(systemVersion)")
         
         if isOpen == true {
             print("The tip is open")
@@ -220,17 +222,18 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         let labelWidth:CGFloat = 375*0.90
         let labelHeight:CGFloat = 110 / 2
         let labelX:CGFloat = (scrollView.frame.width  - labelWidth) / 2
+        let subLabelY:CGFloat = 64 + 40 //(topLabel.frame.height - labelHeight) / 2
 //        let labelY:CGFloat = (rectangle.frame.height  - labelHeight)  / 2
         
         let topLabel = UILabel(frame: CGRect(x: labelX, y: 64, width: labelWidth, height: labelHeight))
-        topLabel.textAlignment = .left
+        topLabel.textAlignment = .center
         topLabel.font = UIFont.boldSystemFont(ofSize: 14)// topLabel.font.withSize(14)
         topLabel.text = "Welcome John Appleseed, lets get started"
         topLabel.tag = 100
         
-        let subLabelY:CGFloat = 64 + 30 //(topLabel.frame.height - labelHeight) / 2
+        
         let subLabel = UILabel(frame: CGRect(x: labelX, y: subLabelY, width: labelWidth, height: labelHeight))
-        subLabel.textAlignment = .left
+        subLabel.textAlignment = .center
         subLabel.font = subLabel.font.withSize(12)
         subLabel.numberOfLines = 5
         subLabel.text = "The first step is to answer a 36 question survey to establish your base health related quality of life"
@@ -743,7 +746,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
                             buttonPlay.transform = CGAffineTransform.identity
                         }
         })
-        let taskViewController = ORKTaskViewController(task: SF36, taskRun: nil)
+        let taskViewController = ORKTaskViewController(task: SF36All, taskRun: nil)
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
 
@@ -838,8 +841,30 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
 //                
                 
 //                viewWithTag.addSubview(viewWithTag(50)
-
+                
             }
+            
+            let labelWidth:CGFloat = 375*0.90
+            let labelHeight:CGFloat = 110 / 2
+            let labelX:CGFloat = (scrollView.frame.width  - labelWidth) / 2
+            let subLabelY:CGFloat = 64 + 40
+            
+            let topLabelDone = UILabel(frame: CGRect(x: labelX, y: 64, width: labelWidth, height: labelHeight))
+            topLabelDone.textAlignment = .center
+            topLabelDone.font = UIFont.boldSystemFont(ofSize: 14)// topLabel.font.withSize(14)
+            topLabelDone.text = "Hearty is here to help you"
+            topLabelDone.tag = 95
+            self.scrollView.addSubview(topLabelDone)
+            
+            //let subLabelY:CGFloat = 64 + 30 //(topLabel.frame.height - labelHeight) / 2
+            let subLabelDone = UILabel(frame: CGRect(x: labelX, y: subLabelY, width: labelWidth, height: labelHeight))
+            subLabelDone.textAlignment = .center
+            subLabelDone.font = subLabelDone.font.withSize(12)
+            subLabelDone.numberOfLines = 5
+            subLabelDone.text = "A few questions every couple of days and Hearty will calculate your quality of life so you can improve your life and condition"
+            subLabelDone.tag = 95
+            self.scrollView.addSubview(subLabelDone)
+        
             let doneLabel = drawTipSubLabel(placementX: 217.5 /*view.frame.width / 2*/, placementY: 179, text: "2nd jan\nScore: 54.9")
 //            doneLabel.backgroundColor = UIColor.brown
             doneLabel.numberOfLines = 2

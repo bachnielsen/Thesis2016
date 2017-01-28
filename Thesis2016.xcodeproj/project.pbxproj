@@ -26,6 +26,7 @@
 		A539BA461DC8B74000920711 /* Thesis2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A539BA451DC8B74000920711 /* Thesis2016UITests.swift */; };
 		A55890BE1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */; };
 		A55890C11DF0380100EA2A34 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A564A95A1DCA1156007F6B46 /* HealthKit.framework */; };
+		A566BD151E3D385100072C76 /* SF36All.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566BD141E3D385100072C76 /* SF36All.swift */; };
 		A574C52D1E3642CF00984E45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574C52C1E3642CF00984E45 /* SettingsViewController.swift */; };
 		A574C5341E3651D700984E45 /* SettingsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574C5331E3651D700984E45 /* SettingsViewController2.swift */; };
 		A583A05C1E2CFCA6002D2870 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */; };
@@ -146,6 +147,7 @@
 		A55890BD1DF0372F00EA2A34 /* Thesis2016.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thesis2016.xcdatamodel; sourceTree = "<group>"; };
 		A55890BF1DF037AA00EA2A34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A564A95A1DCA1156007F6B46 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A566BD141E3D385100072C76 /* SF36All.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SF36All.swift; sourceTree = "<group>"; };
 		A574C52C1E3642CF00984E45 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A574C5331E3651D700984E45 /* SettingsViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController2.swift; sourceTree = "<group>"; };
 		A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				A598B6C41E2DAAE200273F9B /* SF36.swift */,
 				A50F01981E3217710080510E /* OCKInsightItem.swift */,
 				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
+				A566BD141E3D385100072C76 /* SF36All.swift */,
 			);
 			path = Thesis2016;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				A50F01991E3217710080510E /* OCKInsightItem.swift in Sources */,
 				A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */,
 				A583A05E1E2D874A002D2870 /* DrawRectangles.swift in Sources */,
+				A566BD151E3D385100072C76 /* SF36All.swift in Sources */,
 				A598B6C51E2DAAE200273F9B /* SF36.swift in Sources */,
 				A574C5341E3651D700984E45 /* SettingsViewController2.swift in Sources */,
 				A52B91F11E2A9020003251A6 /* CarePlanStoreManager.swift in Sources */,
