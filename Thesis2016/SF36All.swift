@@ -9,10 +9,6 @@
 import Foundation
 import ResearchKit
 
-private var mainQuestion: String {
-    return NSLocalizedString("The following items are about activities you might do during a typical day. Does your health now limit you in these activities? If so, how much?", comment: "")
-}
-
 private var q1: String {
     return NSLocalizedString("1. In general, would you say your health is:", comment: "")
 }

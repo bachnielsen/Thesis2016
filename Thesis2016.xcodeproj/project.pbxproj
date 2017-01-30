@@ -41,6 +41,7 @@
 		A5CF2C051DC8C99B000F01FD /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */; };
 		A5D6F3531E2C218400A19AC8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F3521E2C218400A19AC8 /* Colors.swift */; };
 		A5DBFD9A1E2C107D0084BEB2 /* CarePlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBFD991E2C107D0084BEB2 /* CarePlanData.swift */; };
+		A5DDD6951E3D5CC70032B328 /* AnimatableChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDD6941E3D5CC70032B328 /* AnimatableChart.swift */; };
 		B34925FE14F52BF35FFCCCCD /* Pods_Thesis2016UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,8 @@
 		A55890BF1DF037AA00EA2A34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A564A95A1DCA1156007F6B46 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A566BD141E3D385100072C76 /* SF36All.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SF36All.swift; sourceTree = "<group>"; };
+		A566BD231E3D593A00072C76 /* InsightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsightsTableViewController.swift; sourceTree = "<group>"; };
+		A566BD2A1E3D598F00072C76 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphDataSource.swift; sourceTree = "<group>"; };
 		A574C52C1E3642CF00984E45 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A574C5331E3651D700984E45 /* SettingsViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController2.swift; sourceTree = "<group>"; };
 		A583A05B1E2CFCA6002D2870 /* PlayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		A5D6F3521E2C218400A19AC8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = ../../../../carekit/Sample/Colors.swift; sourceTree = "<group>"; };
 		A5DBFD991E2C107D0084BEB2 /* CarePlanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanData.swift; sourceTree = "<group>"; };
+		A5DDD6941E3D5CC70032B328 /* AnimatableChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableChart.swift; sourceTree = "<group>"; };
 		B836EF6729668B58874933BE /* Pods_Thesis2016UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C51616E2562C2148EBCE53 /* Pods_Thesis2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB00C4231640631996C09A4C /* Pods-Thesis2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thesis2016Tests/Pods-Thesis2016Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				A55890BC1DF0372F00EA2A34 /* Thesis2016.xcdatamodeld */,
 				A5CF2C041DC8C99B000F01FD /* ConsentDocument.swift */,
 				A501DA8C1DCE135700E46853 /* SurveyTask.swift */,
+				A566BD141E3D385100072C76 /* SF36All.swift */,
 				A501DA871DCDF84C00E46853 /* ConsentTask.swift */,
 				A5979A5E1DF061D8005510B4 /* PhysTask.swift */,
 				A5BFCEB41DF96E0300FA187D /* BodilyPainTask.swift */,
@@ -268,7 +273,9 @@
 				A598B6C41E2DAAE200273F9B /* SF36.swift */,
 				A50F01981E3217710080510E /* OCKInsightItem.swift */,
 				A52B91E21E2A887A003251A6 /* OCKSample.xcodeproj */,
-				A566BD141E3D385100072C76 /* SF36All.swift */,
+				A566BD231E3D593A00072C76 /* InsightsTableViewController.swift */,
+				A566BD2A1E3D598F00072C76 /* LineGraphDataSource.swift */,
+				A5DDD6941E3D5CC70032B328 /* AnimatableChart.swift */,
 			);
 			path = Thesis2016;
 			sourceTree = "<group>";
@@ -689,6 +696,7 @@
 				A574C52D1E3642CF00984E45 /* SettingsViewController.swift in Sources */,
 				A5979A5F1DF061D8005510B4 /* PhysTask.swift in Sources */,
 				A5DBFD9A1E2C107D0084BEB2 /* CarePlanData.swift in Sources */,
+				A5DDD6951E3D5CC70032B328 /* AnimatableChart.swift in Sources */,
 				A5D6F3531E2C218400A19AC8 /* Colors.swift in Sources */,
 				A59591831E2A6D18003CB7E9 /* TabBarViewController.swift in Sources */,
 				A58819E01DEEF40D000A9CF2 /* HealthManager.swift in Sources */,
