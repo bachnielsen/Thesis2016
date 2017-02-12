@@ -216,7 +216,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
         buttonDone.frame = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
         buttonDone.setImage(btnImageDone, for: UIControlState.normal)
         buttonDone.tag = 50
-        buttonDone.addTarget(self, action: #selector(self.btnTouched), for:.touchUpInside)
+        //buttonDone.addTarget(self, action: #selector(self.btnTouched), for:.touchUpInside)
 
         //Top bar
         let labelWidth:CGFloat = 375*0.90
@@ -269,7 +269,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate, CLLocatio
 //            dateLabel.backgroundColor = UIColor.brown
             dateLabel.sizeToFit()
             dateLabel.textAlignment = .center
-            roundRectTest.addTarget(self, action: #selector(self.btnMood), for:.touchUpInside)
+            //roundRectTest.addTarget(self, action: #selector(self.btnMood), for:.touchUpInside)
             self.scrollView.addSubview(dateLabel)
             startPos = startPos + CGFloat(100)
             startPosLabel = startPosLabel + CGFloat(100)
